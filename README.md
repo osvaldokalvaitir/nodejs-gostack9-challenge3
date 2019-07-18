@@ -10,6 +10,8 @@
 [![made-for-VSCode](https://img.shields.io/badge/Made%20for-VSCode-1f425f.svg)](https://code.visualstudio.com/)
 ![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)
 
+Aplicação Meetapp usando Node.js, Express, Nodemon, Sucrase, ESLint, Prettier, Sequelize, Json Web Token, bcrypt.js, Yup, pg e pg-hstore.
+
 ## Desafio 02. Iniciando aplicação
 
 Crie uma aplicação do zero utilizando Express.
