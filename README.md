@@ -10,7 +10,7 @@
 [![made-for-VSCode](https://img.shields.io/badge/Made%20for-VSCode-1f425f.svg)](https://code.visualstudio.com/)
 ![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)
 
-Aplicação Meetapp usando Node.js, Express, Nodemon, Sucrase, ESLint, Prettier, Sequelize, Json Web Token, bcrypt.js, Yup, pg e pg-hstore.
+Aplicação Meetapp usando Node.js, Express, Multer, date-fns, Mongoose, Bee-Queue, Nodemailer, Express Handlebars, Youch, dotenv, Mailtrap e Sentry.
 
 ## Desafio 03. Continuando aplicação
 
@@ -74,7 +74,11 @@ Liste apenas meetups que ainda não passaram e ordene meetups mais próximos com
 
   - [Instalação do Projeto](#instalação-do-projeto)
 
+  - [Configuração das Variáveis de Ambiente](#configuração-das-variáveis-de-ambiente)
+
   - [Execução do Projeto](#execução-do-projeto)
+
+  - [Execução do Ouvinte de Fila](#execução-do-ouvinte-de-fila)
 
 - [Utilizados no Projeto](#utilizados-no-projeto)
 
@@ -94,15 +98,31 @@ Clique [aqui](https://github.com/osvaldokalvaitir/projects-settings/blob/master/
 
 Clique [aqui](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/nodejs.md) e siga `Instalação de Projeto`.
 
+### Configuração das Variáveis de Ambiente
+
+Clique [aqui](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/dotenv.md) e siga `Configuração de Variáveis de Ambiente`.
+
 ### Execução do Projeto
 
-Clique [aqui](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/nodejs.md) e siga `Execução de Projeto para Desenvolvimento`.
+Clique [aqui](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/nodejs.md) e siga `Execução de Projeto para Desenvolvimento` ou `Execução de Projeto para Produção`.
+
+### Execução do Ouvinte de Fila
+
+Clique [aqui](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/bee-queue.md) e siga `Execução de Ouvinte de Fila`.
 
 ## Utilizados no Projeto
 
 ### Bibliotecas
 
+- [@sentry/node](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/@sentry-node.md)
+
 - [bcrypt.js](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/bcryptjs.md)
+
+- [Bee-Queue](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/bee-queue.md)
+
+- [date-fns](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/date-fns.md)
+
+- [dotenv](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/dotenv.md)
 
 - [ESLint](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/eslint.md)
 
@@ -112,7 +132,19 @@ Clique [aqui](https://github.com/osvaldokalvaitir/projects-settings/blob/master/
 
 - [Express](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/express.md)
 
+- [Express Handlebars](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/express-handlebars.md)
+
+- [Express Handlebars plugin for Nodemailer](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/nodemailer-express-handlebars.md)
+
+- [ExpressJS Async Errors](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/express-async-errors.md)
+
 - [Json Web Token](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/jsonwebtoken.md)
+
+- [Mongoose](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/mongoose.md)
+
+- [Multer](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/multer.md)
+
+- [Nodemailer](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/nodemailer.md)
 
 - [Nodemon](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/nodemon.md)
 
@@ -128,6 +160,8 @@ Clique [aqui](https://github.com/osvaldokalvaitir/projects-settings/blob/master/
 
 - [Sucrase](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/sucrase.md)
 
+- [Youch](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/youch.md)
+
 - [Yup](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/yup.md)
 
 ### APIs
@@ -135,6 +169,22 @@ Clique [aqui](https://github.com/osvaldokalvaitir/projects-settings/blob/master/
 - **Interna**
 
   - **Rotas**
+
+    - Meetups
+
+      - Lista todas as meetups de uma data ou não
+      - Adiciona novas meetups
+      - Edita dados de meetups existentes
+      - Exclui meetups existentes
+
+    - Inscrições
+
+      - Lista todas as meetups que um usuário está inscrito
+      - Adiciona novas inscrições
+
+    - Organizando
+
+      - Lista todas as meetups que um usuário está organizando
 
     - Usuários
 
@@ -145,10 +195,24 @@ Clique [aqui](https://github.com/osvaldokalvaitir/projects-settings/blob/master/
 
       - Adiciona novas sessões
 
+    - Arquivos
+
+      - Adiciona novos arquivos
+
 ### Ferramentas
 
 - [Docker](https://github.com/osvaldokalvaitir/projects-settings/blob/master/virtualization/docker/docker.md)
 
+  - Imagem do MongoDB: [mongo](https://github.com/osvaldokalvaitir/projects-settings/blob/master/virtualization/docker/images/mongo.md)
+
   - Imagem do PostgreSQL: [postgres](https://github.com/osvaldokalvaitir/projects-settings/blob/master/virtualization/docker/images/postgres.md)
 
+  - Imagem do Redis: [redis:alpine](https://github.com/osvaldokalvaitir/projects-settings/blob/master/virtualization/docker/images/redis-alpine.md)
+
+- [Mailtrap](https://github.com/osvaldokalvaitir/projects-settings/blob/master/email/mailtrap.md)
+
+- [MongoDB Compass Community](https://github.com/osvaldokalvaitir/projects-settings/blob/master/database/mongodb/mongodb-compass-community.md)
+
 - [Postbird](https://github.com/osvaldokalvaitir/projects-settings/blob/master/database/postgresql/postbird.md)
+
+- [Sentry](https://github.com/osvaldokalvaitir/projects-settings/blob/master/error/sentry.md)
