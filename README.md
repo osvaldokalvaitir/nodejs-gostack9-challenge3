@@ -52,7 +52,7 @@ npm install | yarn
 npm run dev | yarn dev
 
 # Run queue listener with npm or yarn
-npm queue | yarn queue
+npm run queue | yarn queue
 ```
 
 Click to learn more about the tools used: [Insomnia](https://github.com/osvaldokalvaitir/awesome/blob/main/src/api-clients/insomnia/insomnia.md), [Docker](https://github.com/osvaldokalvaitir/awesome/blob/main/src/containers/docker/docker.md), [MongoDB Docker Image mongo](https://github.com/osvaldokalvaitir/awesome/blob/main/src/containers/docker/images/mongo.md),  [PostgreSQL Docker Image postgres](https://github.com/osvaldokalvaitir/awesome/blob/main/src/containers/docker/images/postgres.md), [Redis Docker Image redis:alpine](https://github.com/osvaldokalvaitir/awesome/blob/main/src/containers/docker/images/redis-alpine.md), [MongoDB Compass Community](https://github.com/osvaldokalvaitir/awesome/blob/main/src/sgdbs/mongodb/mongodb-compass-community.md), [Postbird](https://github.com/osvaldokalvaitir/awesome/blob/main/src/sgdbs/postgresql/postbird.md), [Mailtrap](https://github.com/osvaldokalvaitir/awesome/blob/main/src/emails/mailtrap.md), [Sentry](https://github.com/osvaldokalvaitir/awesome/blob/main/src/errors/sentry.md).
